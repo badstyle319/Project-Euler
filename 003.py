@@ -1,10 +1,13 @@
 import math
+import time
 
-target=600851475143
-ans=0
+TARGET = 600851475143
 
-for i in range(3,int(math.sqrt(target))+1,2):
-	if target%i==0:
-		ans = max(ans, i)
-		target/=i
-print(ans)
+start = time.perf_counter()
+ans = 0
+target = TARGET
+for i in range(3, int(math.sqrt(target) + 0.5), 2):
+    if target % i == 0:
+        ans = max(ans, i)
+        target /= i
+print(ans, time.perf_counter()-start)
