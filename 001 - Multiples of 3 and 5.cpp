@@ -18,27 +18,27 @@ using namespace std;
 
 int main()
 {
-	#ifndef ONLINE_JUDGE
+#ifndef ONLINE_JUDGE
 	freopen("in.txt", "r", stdin);
 	freopen("out.txt", "w", stdout);
-	#endif
-	
+#endif
+
 	const clock_t begin = clock();
 	///////////////
 	int sum = 0;
-	for(int i=1;i<1000;i++)
-		if(i%3==0 || i%5==0)
-			sum+=i;
-	cout<<sum<<endl;
+	for (int i = 1; i < 1000; i++)
+		if (i % 3 == 0 || i % 5 == 0)
+			sum += i;
+	cout << sum << endl;
 	///////////////
 	cout.setf(ios::fixed);
 	cout.precision(3);
-	cout<<float(clock()-begin)/CLOCKS_PER_SEC<<endl;
-	
-	#ifndef ONLINE_JUDGE
+	cout << float(clock() - begin) / CLOCKS_PER_SEC << endl;
+
+#ifndef ONLINE_JUDGE
 	fclose(stdin);
 	fclose(stdout);
-	#endif 
-	
+#endif
+
 	return 0;
 }

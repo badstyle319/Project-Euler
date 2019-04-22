@@ -18,37 +18,38 @@ using namespace std;
 
 int main()
 {
-	#ifndef ONLINE_JUDGE
+#ifndef ONLINE_JUDGE
 	freopen("in.txt", "r", stdin);
 	freopen("out.txt", "w", stdout);
-	#endif
-	
+#endif
+
 	const clock_t begin = clock();
 	///////////////
 	double num = 600851475143;
 	int val = sqrt(num);
-	int *primes = new int[val+1];
+	int *primes = new int[val + 1];
 	memset(primes, 1, val);
-	for(int i=2;i<=val;i++)
-		if(primes[i])
-			for(int j=i+i;j<=val;j+=i)
+	for (int i = 2; i <= val; i++)
+		if (primes[i])
+			for (int j = i + i; j <= val; j += i)
 				primes[j] = 0;
-	for(int i=val;i>=2;i--)
-		if(primes[i] && fmod(num, i)==0){
-			cout<<i<<endl;
+	for (int i = val; i >= 2; i--)
+		if (primes[i] && fmod(num, i) == 0)
+		{
+			cout << i << endl;
 			break;
 		}
 
-	delete [] primes;
+	delete[] primes;
 	///////////////
 	cout.setf(ios::fixed);
 	cout.precision(3);
-	cout<<float(clock()-begin)/CLOCKS_PER_SEC<<endl;
-	
-	#ifndef ONLINE_JUDGE
+	cout << float(clock() - begin) / CLOCKS_PER_SEC << endl;
+
+#ifndef ONLINE_JUDGE
 	fclose(stdin);
 	fclose(stdout);
-	#endif 
-	
+#endif
+
 	return 0;
 }
