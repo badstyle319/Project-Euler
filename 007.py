@@ -1,6 +1,6 @@
 import time
 
-LIMIT = 100
+LIMIT = 110000
 
 
 def countPrime(limit):
@@ -18,7 +18,7 @@ def countPrime(limit):
 
 start = time.perf_counter()
 nums = countPrime(LIMIT)
-if len(nums)>10001:
+if len(nums) > 10001:
     print(nums[10000], time.perf_counter() - start)
 else:
     print('LIMIT is too small')
