@@ -4,7 +4,7 @@ import time
 def isPalindromic(num):
     val = str(num)
     i = 0
-    j = len(val)-1
+    j = len(val) - 1
     while i <= j:
         if val[i] != val[j]:
             return False
@@ -21,4 +21,4 @@ for i in range(999, 101, -1):
             num = i * j
             if num > ans and isPalindromic(num):
                 ans = num
-print(ans, time.perf_counter()-start)
+print(ans, time.perf_counter() - start)

@@ -4,14 +4,14 @@ start = time.perf_counter()
 num1 = 0
 num2 = 1
 sum = 0
-n = num1+num2
+n = num1 + num2
 while n <= 4000000:
     if n % 2 == 0:
         sum += n
     num1 = num2
     num2 = n
-    n = num1+num2
-print(sum, time.perf_counter()-start)
+    n = num1 + num2
+print(sum, time.perf_counter() - start)
 
 '''
 F(n)=F(n-1)+F(n-2)
@@ -34,4 +34,4 @@ while F[k] <= 4000000:
     sum += F[k]
     k += 3
     F[k] = 4 * F[k-3] + F[k-6]
-print(sum, time.perf_counter()-start)
+print(sum, time.perf_counter() - start)

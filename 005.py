@@ -1,11 +1,11 @@
 import math
 import time
 
-TARGET = 20
+LIMIT = 20
 
 start = time.perf_counter()
 d = dict()
-for i in range(2, TARGET + 1):
+for i in range(2, LIMIT + 1):
     num = i
     for j in range(2, num + 1):
         cnt = 0
@@ -18,5 +18,5 @@ for i in range(2, TARGET + 1):
             d[j] = cnt
 ans = 1
 for key in d:
-    ans *= key**d[key]
-print(ans, time.perf_counter()-start)
+    ans *= key ** d[key]
+print(ans, time.perf_counter() - start)
