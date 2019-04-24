@@ -15,8 +15,8 @@ def isPalindromic(num):
 
 start = time.perf_counter()
 ans = 1
-for i in range(999, 101, -1):
-    for j in range(999, 101, -1):
+for i in range(999, 99, -1):
+    for j in range(999, 99, -1):
         if i <= j:
             num = i * j
             if num > ans and isPalindromic(num):
