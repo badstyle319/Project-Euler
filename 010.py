@@ -3,7 +3,7 @@ import time
 LIMIT = 2000000
 
 start = time.perf_counter()
-isPrime = [False if i % 2 == 0 else True for i in range(0, LIMIT)]
+isPrime = [i % 2 != 0 for i in range(0, LIMIT)]
 isPrime[1], isPrime[2] = False, True
 for i in range(3, int(LIMIT ** 0.5) + 1, 2):
     if isPrime[i]:
